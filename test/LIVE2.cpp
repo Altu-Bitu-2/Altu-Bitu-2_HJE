@@ -4,6 +4,7 @@
 
 #include <iostream>
 #include <vector>
+#include <algorithm>
 
 using namespace std;
 
@@ -21,6 +22,7 @@ void merge(int left, int mid, int right){
             sorted[index++] = arr[p2++];
         }
     }
+    //검산
     while(p1 <= mid){
         sorted[index++] = arr[p1++];
     }
@@ -50,7 +52,7 @@ int main() {
         cin >> arr[i];
     }
 
-    divide(0, n-1);
+   sort(arr.begin, arr.end())
 
     for(int i=0; i<n; i++){
         cout << arr[i] << '\n';
